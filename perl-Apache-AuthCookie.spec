@@ -1,7 +1,11 @@
+#
+# Conditional build:
+# _with_tests - perform "make test"
+#
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Apache
 %define		pnam	AuthCookie
-Summary:	Apache::AuthCookie perl module 
+Summary:	Apache::AuthCookie Perl module 
 Summary(cs):	Modul Apache::AuthCookie pro Perl
 Summary(da):	Perlmodul Apache::AuthCookie
 Summary(de):	Apache::AuthCookie Perl Modul
@@ -11,7 +15,7 @@ Summary(it):	Modulo di Perl Apache::AuthCookie
 Summary(ja):	Apache::AuthCookie Perl ¥â¥¸¥å¡¼¥ë
 Summary(ko):	Apache::AuthCookie ÆÞ ¸ðÁÙ
 Summary(no):	Perlmodul Apache::AuthCookie
-Summary(pl):	Modu³ perla Apache::AuthCookie
+Summary(pl):	Modu³ Perla Apache::AuthCookie
 Summary(pt_BR):	Módulo Perl Apache::AuthCookie
 Summary(pt):	Módulo de Perl Apache::AuthCookie
 Summary(ru):	íÏÄÕÌØ ÄÌÑ Perl Apache::AuthCookie
@@ -19,8 +23,8 @@ Summary(sv):	Apache::AuthCookie Perlmodul
 Summary(uk):	íÏÄÕÌØ ÄÌÑ Perl Apache::AuthCookie
 Summary(zh_CN):	Apache::AuthCookie Perl Ä£¿é
 Name:		perl-Apache-AuthCookie
-Version:	3.02
-Release:	2
+Version:	3.04
+Release:	1
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -50,7 +54,8 @@ identyfikator sesji.
 %build
 echo '!' | perl Makefile.PL
 %{__make}
-#%{__make} test
+# tests require working apache and interactive configuration setting
+%{?_with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
