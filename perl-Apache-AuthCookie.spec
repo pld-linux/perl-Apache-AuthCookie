@@ -14,7 +14,7 @@ Summary(fr):	Module Perl Apache::AuthCookie
 Summary(it):	Modulo di Perl Apache::AuthCookie
 Summary(ja):	Apache::AuthCookie Perl ¥â¥¸¥å¡¼¥ë
 Summary(ko):	Apache::AuthCookie ÆÞ ¸ðÁÙ
-Summary(no):	Perlmodul Apache::AuthCookie
+Summary(nb):	Perlmodul Apache::AuthCookie
 Summary(pl):	Modu³ Perla Apache::AuthCookie
 Summary(pt_BR):	Módulo Perl Apache::AuthCookie
 Summary(pt):	Módulo de Perl Apache::AuthCookie
