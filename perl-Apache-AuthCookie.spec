@@ -3,8 +3,8 @@
 %bcond_with	tests	# perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define		pdir	Apache
-%define		pnam	AuthCookie
+%define	pdir	Apache
+%define	pnam	AuthCookie
 Summary:	Apache::AuthCookie - Perl authentication and authorization via cookies
 Summary(pl):	Apache::AuthCookie - uwierzytelnianie i autoryzacja w Perlu za pomoc± ,,cookie''
 Name:		perl-Apache-AuthCookie
