@@ -24,12 +24,12 @@ Summary(uk):	Модуль для Perl Apache::AuthCookie
 Summary(zh_CN):	Apache::AuthCookie Perl дё©И
 Name:		perl-Apache-AuthCookie
 Version:	3.04
-Release:	1
+Release:	2
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 BuildRequires:	perl >= 5
-BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	rpm-perlprov >= 4.0.2-104
 Requires:	apache-mod_perl >= 1.24
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
