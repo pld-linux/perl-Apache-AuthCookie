@@ -5,7 +5,7 @@
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Apache
 %define		pnam	AuthCookie
-Summary:	Apache::AuthCookie Perl module 
+Summary:	Apache::AuthCookie Perl module
 Summary(cs):	Modul Apache::AuthCookie pro Perl
 Summary(da):	Perlmodul Apache::AuthCookie
 Summary(de):	Apache::AuthCookie Perl Modul
