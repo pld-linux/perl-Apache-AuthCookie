@@ -3,8 +3,8 @@
 %bcond_with	tests	# perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	Apache
-%define	pnam	AuthCookie
+%define		pdir	Apache
+%define		pnam	AuthCookie
 Summary:	Apache::AuthCookie - Perl authentication and authorization via cookies
 Summary(pl):	Apache::AuthCookie - uwierzytelnianie i autoryzacja w Perlu za pomoc± ,,cookie''
 Name:		perl-Apache-AuthCookie
@@ -24,7 +24,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Apache::AuthCookie allows you to intercept a user's first
-unauthenticated access to a protected document.  The user will be
+unauthenticated access to a protected document. The user will be
 presented with a custom form where they can enter authentication
 credentials. The credentials are posted to the server where AuthCookie
 verifies them and returns a session key.
@@ -33,7 +33,7 @@ verifies them and returns a session key.
 Apache::AuthCookie pozwala na przechwycenie pierwszego
 nieautoryzowanego zapytania u¿ytkownika o chroniony dokument. 
 U¿ytkownik zobaczy formularz, w który bêdzie musia³ wpisaæ wymagane do
-autoryzacji dane.  Te dane zostan± wys³ane na serwer, gdzie AuthCookie
+autoryzacji dane. Te dane zostan± wys³ane na serwer, gdzie AuthCookie
 zweryfikuje je i zwróci identyfikator sesji.
 
 %prep
