@@ -5,27 +5,13 @@
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Apache
 %define		pnam	AuthCookie
-Summary:	Apache::AuthCookie Perl module
-Summary(cs):	Modul Apache::AuthCookie pro Perl
-Summary(da):	Perlmodul Apache::AuthCookie
-Summary(de):	Apache::AuthCookie Perl Modul
-Summary(es):	Módulo de Perl Apache::AuthCookie
-Summary(fr):	Module Perl Apache::AuthCookie
-Summary(it):	Modulo di Perl Apache::AuthCookie
-Summary(ja):	Apache::AuthCookie Perl ¥â¥¸¥å¡¼¥ë
-Summary(ko):	Apache::AuthCookie ÆÞ ¸ðÁÙ
-Summary(nb):	Perlmodul Apache::AuthCookie
-Summary(pl):	Modu³ Perla Apache::AuthCookie
-Summary(pt_BR):	Módulo Perl Apache::AuthCookie
-Summary(pt):	Módulo de Perl Apache::AuthCookie
-Summary(ru):	íÏÄÕÌØ ÄÌÑ Perl Apache::AuthCookie
-Summary(sv):	Apache::AuthCookie Perlmodul
-Summary(uk):	íÏÄÕÌØ ÄÌÑ Perl Apache::AuthCookie
-Summary(zh_CN):	Apache::AuthCookie Perl Ä£¿é
+Summary:	Apache::AuthCookie - Perl authentication and authorization via cookies
+Summary(pl):	Apache::AuthCookie - uwierzytelnianie i autoryzacja w Perlu za pomoc± ,,cookie''
 Name:		perl-Apache-AuthCookie
 Version:	3.05
 Release:	2
-License:	GPL/Artistic
+# same as perl
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	4288575a1eedb52b2fb774324cd63ec8
@@ -37,18 +23,18 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Apache::AuthCookie allows you to intercept a user's first unauthenticated
-access to a protected document.  The user will be presented with a custom
-form where they can enter authentication credentials.  The credentials
-are posted to the server where AuthCookie verifies them and returns a
-session key.
+Apache::AuthCookie allows you to intercept a user's first
+unauthenticated access to a protected document.  The user will be
+presented with a custom form where they can enter authentication
+credentials. The credentials are posted to the server where AuthCookie
+verifies them and returns a session key.
 
 %description -l pl
-Apache::AuthCookie pozwala na przechwycenie pierwszego nieautoryzowanego
-zapytania u¿ytkownika o chroniony dokument.  U¿ytkownik zobaczy formularz,
-w który bêdzie musia³ wpisaæ wymagane do autoryzacji dane.  Te dane
-zostan± wys³ane na serwer, gdzie AuthCookie zweryfikuje je i zwróci
-identyfikator sesji.
+Apache::AuthCookie pozwala na przechwycenie pierwszego
+nieautoryzowanego zapytania u¿ytkownika o chroniony dokument. 
+U¿ytkownik zobaczy formularz, w który bêdzie musia³ wpisaæ wymagane do
+autoryzacji dane.  Te dane zostan± wys³ane na serwer, gdzie AuthCookie
+zweryfikuje je i zwróci identyfikator sesji.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
