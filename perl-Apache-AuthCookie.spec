@@ -8,13 +8,13 @@
 Summary:	Apache::AuthCookie - Perl authentication and authorization via cookies
 Summary(pl):	Apache::AuthCookie - uwierzytelnianie i autoryzacja w Perlu za pomoc± ,,cookie''
 Name:		perl-Apache-AuthCookie
-Version:	3.08
+Version:	3.09_01
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	acbb69d043d4c4a913007d068692339c
+Source0:	http://search.cpan.org/CPAN/authors/id/M/MS/MSCHOUT/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	924df2ddb1a6940d292ae4d427e5f3f9
 BuildRequires:	apache-mod_perl >= 1.24
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -60,6 +60,8 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc Changes
 %{perl_vendorlib}/Apache2/AuthCookie.pm
+%{perl_vendorlib}/Apache2/AuthCookie/Util.pm
+%{perl_vendorlib}/Apache2/AuthCookie
 %{perl_vendorlib}/Apache/AuthCookie.pm
 %{perl_vendorlib}/Apache/AuthCookie
 %{_mandir}/man3/*
