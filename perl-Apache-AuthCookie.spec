@@ -15,6 +15,7 @@ License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://search.cpan.org/CPAN/authors/id/M/MS/MSCHOUT/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	924df2ddb1a6940d292ae4d427e5f3f9
+Patch0:		%{pdir}-%{pnam}-mod_perl2-symbols.patch
 BuildRequires:	apache-mod_perl >= 1.24
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -29,6 +30,8 @@ presented with a custom form where they can enter authentication
 credentials. The credentials are posted to the server where AuthCookie
 verifies them and returns a session key.
 
+This version includes Apache2::AuthCookie for mod_perl2.
+
 %description -l pl
 Apache::AuthCookie pozwala na przechwycenie pierwszego
 nieautoryzowanego zapytania u¿ytkownika o chroniony dokument. 
@@ -36,8 +39,11 @@ U¿ytkownik zobaczy formularz, w który bêdzie musia³ wpisaæ wymagane do
 autoryzacji dane. Te dane zostan± wys³ane na serwer, gdzie AuthCookie
 zweryfikuje je i zwróci identyfikator sesji.
 
+Ta wersja dostarcza równie¿ Apache2::AuthCookie dla mod_perl2.
+
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
+%patch0 -p1
 
 %build
 echo '!' | %{__perl} Makefile.PL \
