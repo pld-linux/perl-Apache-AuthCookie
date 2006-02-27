@@ -60,7 +60,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc Changes
 %{perl_vendorlib}/Apache2/AuthCookie.pm
-%{perl_vendorlib}/Apache2/AuthCookie/Util.pm
 %{perl_vendorlib}/Apache2/AuthCookie
 %{perl_vendorlib}/Apache/AuthCookie.pm
 %{perl_vendorlib}/Apache/AuthCookie
