@@ -1,3 +1,5 @@
+# TODO
+# - split for mod_perl1 and mod_perl2, currently it depends on both
 #
 # Conditional build:
 %bcond_with	tests	# perform "make test"
@@ -8,15 +10,15 @@
 Summary:	Apache::AuthCookie - Perl authentication and authorization via cookies
 Summary(pl):	Apache::AuthCookie - uwierzytelnianie i autoryzacja w Perlu za pomoc± ,,cookie''
 Name:		perl-Apache-AuthCookie
-Version:	3.09_01
+Version:	3.10
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://search.cpan.org/CPAN/authors/id/M/MS/MSCHOUT/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	924df2ddb1a6940d292ae4d427e5f3f9
-Patch0:		%{pdir}-%{pnam}-mod_perl2-symbols.patch
-BuildRequires:	apache-mod_perl >= 1.24
+# Source0-md5:	8dd9f4a3db329c378f5e5b394c05b5b3
+URL:		http://search.cpan.org/dist/Apache-AuthCookie/
+BuildRequires:	apache-mod_perl-devel >= 1.24
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 Requires:	apache-mod_perl >= 1.24
@@ -34,7 +36,7 @@ This version includes Apache2::AuthCookie for mod_perl2.
 
 %description -l pl
 Apache::AuthCookie pozwala na przechwycenie pierwszego
-nieautoryzowanego zapytania u¿ytkownika o chroniony dokument. 
+nieautoryzowanego zapytania u¿ytkownika o chroniony dokument.
 U¿ytkownik zobaczy formularz, w który bêdzie musia³ wpisaæ wymagane do
 autoryzacji dane. Te dane zostan± wys³ane na serwer, gdzie AuthCookie
 zweryfikuje je i zwróci identyfikator sesji.
@@ -43,7 +45,6 @@ Ta wersja dostarcza równie¿ Apache2::AuthCookie dla mod_perl2.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
-%patch0 -p1
 
 %build
 echo '!' | %{__perl} Makefile.PL \
@@ -66,7 +67,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc Changes
 %{perl_vendorlib}/Apache2/AuthCookie.pm
-%{perl_vendorlib}/Apache2/AuthCookie
 %{perl_vendorlib}/Apache/AuthCookie.pm
 %{perl_vendorlib}/Apache/AuthCookie
 %{_mandir}/man3/*
