@@ -8,7 +8,7 @@
 %define		pdir	Apache
 %define		pnam	AuthCookie
 Summary:	Apache::AuthCookie - Perl authentication and authorization via cookies
-Summary(pl):	Apache::AuthCookie - uwierzytelnianie i autoryzacja w Perlu za pomoc± ,,cookie''
+Summary(pl.UTF-8):   Apache::AuthCookie - uwierzytelnianie i autoryzacja w Perlu za pomocÄ… ,,cookie''
 Name:		perl-Apache-AuthCookie
 Version:	3.10
 Release:	3
@@ -35,14 +35,14 @@ verifies them and returns a session key.
 
 This version includes Apache2::AuthCookie for mod_perl2.
 
-%description -l pl
+%description -l pl.UTF-8
 Apache::AuthCookie pozwala na przechwycenie pierwszego
-nieautoryzowanego zapytania u¿ytkownika o chroniony dokument.
-U¿ytkownik zobaczy formularz, w który bêdzie musia³ wpisaæ wymagane do
-autoryzacji dane. Te dane zostan± wys³ane na serwer, gdzie AuthCookie
-zweryfikuje je i zwróci identyfikator sesji.
+nieautoryzowanego zapytania uÅ¼ytkownika o chroniony dokument.
+UÅ¼ytkownik zobaczy formularz, w ktÃ³ry bÄ™dzie musiaÅ‚ wpisaÄ‡ wymagane do
+autoryzacji dane. Te dane zostanÄ… wysÅ‚ane na serwer, gdzie AuthCookie
+zweryfikuje je i zwrÃ³ci identyfikator sesji.
 
-Ta wersja dostarcza równie¿ Apache2::AuthCookie dla mod_perl2.
+Ta wersja dostarcza rÃ³wnieÅ¼ Apache2::AuthCookie dla mod_perl2.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
