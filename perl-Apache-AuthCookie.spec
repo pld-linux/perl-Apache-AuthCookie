@@ -8,7 +8,7 @@
 %define		pdir	Apache
 %define		pnam	AuthCookie
 Summary:	Apache::AuthCookie - Perl authentication and authorization via cookies
-Summary(pl.UTF-8):   Apache::AuthCookie - uwierzytelnianie i autoryzacja w Perlu za pomocą ,,cookie''
+Summary(pl.UTF-8):	Apache::AuthCookie - uwierzytelnianie i autoryzacja w Perlu za pomocą ,,cookie''
 Name:		perl-Apache-AuthCookie
 Version:	3.10
 Release:	3
