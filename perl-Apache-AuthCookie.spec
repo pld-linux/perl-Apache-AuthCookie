@@ -1,6 +1,3 @@
-# TODO
-# - split for mod_perl1 and mod_perl2, currently it depends on both
-#
 # Conditional build:
 %bcond_with	tests	# perform "make test"
 #
@@ -10,7 +7,7 @@ Summary:	Apache::AuthCookie - Perl authentication and authorization via cookies
 Summary(pl.UTF-8):	Apache::AuthCookie - uwierzytelnianie i autoryzacja w Perlu za pomocą ,,cookie''
 Name:		perl-Apache-AuthCookie
 Version:	3.32
-Release:	1
+Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
@@ -60,6 +57,10 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+# mod_perl 1 API, PLD ships only mod_perl 2
+%{__rm} $RPM_BUILD_ROOT%{perl_vendorlib}/Apache/AuthCookie{,/Params}.pm \
+	$RPM_BUILD_ROOT%{_mandir}/man3/Apache::AuthCookie{,::Params}.3pm
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -69,7 +70,6 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_vendorlib}/Apache2/AuthCookie.pm
 %{perl_vendorlib}/Apache2/AuthCookie
 %{perl_vendorlib}/Apache2_4
-%{perl_vendorlib}/Apache/AuthCookie.pm
 %{perl_vendorlib}/Apache/README.apache-2.4.pod
 %{perl_vendorlib}/Apache/AuthCookie
 %{_mandir}/man3/*
